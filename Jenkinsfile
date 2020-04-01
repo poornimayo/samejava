@@ -7,7 +7,7 @@ pipeline {
        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'b8522e92-ee04-461e-9cf3-fe68e9ac6347', url: 'https://github.com/poornimayo/samejava.git']]])
        } 
    }
-      stage('compile){
+      stage('compile'){
             steps{
                bat label: '', script: '''mvn compile
 
