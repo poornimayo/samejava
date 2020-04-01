@@ -2,7 +2,7 @@
 pipeline {
    agent any
    stages{
-   stage('Checkout'){
+   stage('Checkout or pull from github'){
        steps{
        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'b8522e92-ee04-461e-9cf3-fe68e9ac6347', url: 'https://github.com/poornimayo/samejava.git']]])
        } 
